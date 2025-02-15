@@ -1,0 +1,16 @@
+store_version: 1
+
+id: runtipi
+name: Runtipi apps
+tagline: Apps originally designed for the Tipi homeserver
+description:
+  This app store contains apps that are originally designed for the Tipi homeserver. Not all apps in this store are guaranteed to work with Nirvati.
+developers:
+  Runtipi: https://runtipi.io
+  Nirvati: https://nirvati.org
+license: AGPL-3.0-or-later
+icon: https://official-app-icons.nirvati.org/tipi-compat/icon.svg
+
+content:
+  v0.0.1: apps
+
