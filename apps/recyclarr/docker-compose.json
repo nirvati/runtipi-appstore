@@ -7,7 +7,7 @@
       "isMain": true,
       "user": "${TIPI_UID}:${TIPI_GID}",
       "environment": {
-        "RECYCLARR_CREATE_CONFIG": "${RECYCLARR_CREATE_CONFIG-true}",
+        "RECYCLARR_CREATE_CONFIG": "${RECYCLARR_CREATE_CONFIG:-true}",
         "TZ": "${TZ}"
       },
       "volumes": [
