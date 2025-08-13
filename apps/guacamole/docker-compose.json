@@ -3,10 +3,11 @@
   "services": [
     {
       "name": "guacamole",
-      "image": "guacamole/guacamole:1.5.5",
+      "image": "guacamole/guacamole:1.6.0",
       "isMain": true,
       "internalPort": 8080,
       "environment": {
+        "TOTP_ENABLED": "${GUACAMOLE_TOTP_ENABLED}",
         "POSTGRESQL_DATABASE": "guacamole",
         "POSTGRESQL_USER": "guacamole",
         "POSTGRESQL_PASSWORD": "${GUACAMOLE_DB_PASSWORD}",

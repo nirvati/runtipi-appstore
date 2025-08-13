@@ -20,6 +20,13 @@ interface DockerComposeYml {
   [key: string]: unknown;
 }
 
+interface DockerComposeJson {
+  services: Array<{
+    image: string;
+    isMain: boolean;
+  }>;
+}
+
 export async function readYamlFile<T>(filepath: string): Promise<T | null> {
   try {
     const content = await fs.readFile(filepath, "utf-8");
@@ -39,9 +46,11 @@ const updateAppConfig = async (packageFile: string, newVersion: string) => {
     const packageRoot = path.dirname(packageFile);
     const configPath = path.join(packageRoot, "config.json");
     const dockerComposeYmlPath = path.join(packageRoot, "docker-compose.yml");
+    const dockerComposeJsonPath = path.join(packageRoot, "docker-compose.json");
 
     const config = await readJsonFile<AppInfo>(configPath);
     const dockerComposeYml = await readYamlFile<DockerComposeYml>(dockerComposeYmlPath);
+    const dockerComposeJson = await readJsonFile<DockerComposeJson>(dockerComposeJsonPath);
 
     if (dockerComposeYml) {
       dockerComposeYml.services = Object.fromEntries(
@@ -55,8 +64,17 @@ const updateAppConfig = async (packageFile: string, newVersion: string) => {
       );
     }
 
+    if (dockerComposeJson) {
+      for (const service of dockerComposeJson.services) {
+        if (service.image === `${packageName}:${newVersion}` && service.isMain) {
+          config.version = newVersion;
+        }
+      }
+    } else {
+      config.version = newVersion;
+    }
+
     config.tipi_version = config.tipi_version + 1;
-    config.version = newVersion;
     config.updated_at = Date.now();
 
     await fs.writeFile(dockerComposeYmlPath, yaml.dump(dockerComposeYml, { lineWidth: -1, noRefs: true, sortKeys: false, indent: 2 }));
