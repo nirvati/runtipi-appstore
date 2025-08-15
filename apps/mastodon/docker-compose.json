@@ -6,8 +6,8 @@
       "image": "lscr.io/linuxserver/mastodon:4.4.3",
       "isMain": true,
       "internalPort": 443,
-      "nirvatiIsHttps": true,
-      "nirvatiTlsInsecure": true,
+      "n5iIsHttps": true,
+      "n5iTlsInsecure": true,
       "environment": {
         "PUID": "1000",
         "PGID": "1000",
