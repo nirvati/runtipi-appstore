@@ -1,7 +1,7 @@
 store_version: 1
 
 id: runtipi
-name: Runtipi apps
+name: Other apps
 tagline: Apps originally designed for the Tipi homeserver
 description:
   This app store contains apps that are originally designed for the Tipi homeserver. Not all apps in this store are guaranteed to work with Nirvati.
