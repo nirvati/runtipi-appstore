@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "gotify",
-      "image": "gotify/server:2.6.3",
+      "image": "gotify/server:2.7.3",
       "isMain": true,
       "internalPort": 80,
       "environment": {
@@ -17,5 +17,16 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "overrides": [
+    {
+      "architecture": "arm64",
+      "services": [
+        {
+          "name": "gotify",
+          "image": "gotify/server-arm64:2.6.3"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

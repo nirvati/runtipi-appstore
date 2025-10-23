@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "komga",
-      "image": "ghcr.io/gotson/komga:1.23.1",
+      "image": "ghcr.io/gotson/komga:1.23.5",
       "isMain": true,
       "internalPort": 25600,
       "environment": {
@@ -24,5 +24,5 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

@@ -1,9 +1,9 @@
 {
-  "$schema": "../dynamic-compose-schema.json",
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "tailscale",
-      "image": "tailscale/tailscale:v1.86.2",
+      "image": "tailscale/tailscale:v1.88.4",
       "isMain": true,
       "environment": {
         "TS_SERVE_CONFIG": "${TAILSCALE_SERVE_CONFIG}",

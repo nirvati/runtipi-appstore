@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "calcom",
-      "image": "calcom/cal.com:v5.6.0",
+      "image": "calcom/cal.com:v5.8.2",
       "isMain": true,
       "internalPort": 3000,
       "environment": {
@@ -47,5 +47,5 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

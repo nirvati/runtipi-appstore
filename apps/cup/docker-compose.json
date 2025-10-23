@@ -1,9 +1,9 @@
 {
-  "$schema": "../dynamic-compose-schema.json",
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "cup",
-      "image": "ghcr.io/sergi0g/cup:v3.4.2",
+      "image": "ghcr.io/sergi0g/cup:v3.4.3",
       "command": "serve",
       "volumes": [
         {

@@ -2,10 +2,10 @@
   "services": [
     {
       "name": "nginx",
-      "image": "nginx:1.29.1",
+      "image": "nginx:1.29.2",
       "isMain": true,
       "internalPort": 80
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

@@ -1,9 +1,9 @@
 {
-  "$schema": "../dynamic-compose-schema.json",
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "matrix-conduit",
-      "image": "matrixconduit/matrix-conduit:v0.10.8",
+      "image": "matrixconduit/matrix-conduit:v0.10.9",
       "isMain": true,
       "environment": {
         "CONDUIT_SERVER_NAME": "${APP_DOMAIN}",
@@ -18,8 +18,7 @@
         "CONDUIT_TRUSTED_SERVERS": "${TRUSTED_SERVERS:-[]}",
         "CONDUIT_ALLOW_CHECK_FOR_UPDATES": "false",
         "CONDUIT_TURN_URIS": "${TURN_URIS:-[\"turn:localhost?transport=udp\", \"turn:localhost?transport=tcp\"]}",
-        "CONDUIT_TURN_SECRET": "${TURN_SECRET:-turnsecret}",
-        "CONDUIT_CONFIG": ""
+        "CONDUIT_TURN_SECRET": "${TURN_SECRET:-turnsecret}"
       },
       "volumes": [
         {

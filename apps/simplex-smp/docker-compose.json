@@ -1,9 +1,9 @@
 {
-  "$schema": "../dynamic-compose-schema.json",
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "simplex-smp",
-      "image": "simplexchat/smp-server:v6.4.3",
+      "image": "simplexchat/smp-server:v6.4.5",
       "isMain": true,
       "internalPort": 5223,
       "environment": {

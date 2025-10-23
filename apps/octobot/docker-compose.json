@@ -1,9 +1,9 @@
 {
-  "$schema": "../dynamic-compose-schema.json",
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "octobot",
-      "image": "drakkarsoftware/octobot:2.0.12",
+      "image": "drakkarsoftware/octobot:2.1.13",
       "isMain": true,
       "internalPort": 5001,
       "environment": {

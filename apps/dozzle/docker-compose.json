@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "dozzle",
-      "image": "amir20/dozzle:v8.13.9",
+      "image": "amir20/dozzle:v8.14.5",
       "isMain": true,
       "internalPort": 8080,
       "environment": {
@@ -22,5 +22,5 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

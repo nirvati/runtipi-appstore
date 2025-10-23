@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "budibase",
-      "image": "budibase/budibase:3.15.0",
+      "image": "budibase/budibase:3.21.3",
       "isMain": true,
       "internalPort": 80,
       "volumes": [
@@ -13,5 +13,5 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

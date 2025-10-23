@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "audiobookshelf",
-      "image": "ghcr.io/advplyr/audiobookshelf:2.28.0",
+      "image": "ghcr.io/advplyr/audiobookshelf:2.30.0",
       "isMain": true,
       "internalPort": 80,
       "volumes": [
@@ -25,5 +25,5 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

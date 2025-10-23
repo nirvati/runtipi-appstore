@@ -2,12 +2,13 @@
   "services": [
     {
       "name": "tandoor",
-      "image": "ghcr.io/tandoorrecipes/recipes:2.0.2",
+      "image": "ghcr.io/tandoorrecipes/recipes:2.3.3",
       "isMain": true,
-      "internalPort": 8080,
+      "internalPort": 80,
       "environment": {
         "SECRET_KEY": "${TANDOOR_SECRET_KEY}",
         "DB_ENGINE": "django.db.backends.postgresql",
+        "GUNICORN_MEDIA": "1",
         "POSTGRES_HOST": "tandoor-db",
         "POSTGRES_PORT": "5432",
         "POSTGRES_USER": "tandoor",
@@ -34,7 +35,7 @@
         "timeout": "5s",
         "retries": 5,
         "startPeriod": "30s",
-        "test": "wget --no-verbose --tries=1 --spider http://localhost:8080"
+        "test": "wget --no-verbose --tries=1 --spider http://localhost:80"
       }
     },
     {
@@ -57,9 +58,9 @@
         "timeout": "5s",
         "retries": 5,
         "startPeriod": "30s",
-        "test": "pg_isready -d tandoor"
+        "test": "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"
       }
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }

@@ -1,9 +1,9 @@
 {
-  "$schema": "../dynamic-compose-schema.json",
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
   "services": [
     {
       "name": "flowise",
-      "image": "flowiseai/flowise:3.0.5",
+      "image": "flowiseai/flowise:3.0.8",
       "isMain": true,
       "internalPort": 8009,
       "environment": {

@@ -5,7 +5,6 @@
       "image": "registry.gitlab.com/bockiii/deemix-docker:latest",
       "isMain": true,
       "internalPort": 6595,
-      "restart": "unless-stopped",
       "environment": {
         "PUID": "1000",
         "PGID": "1000",
@@ -31,5 +30,5 @@
       ]
     }
   ],
-  "$schema": "../dynamic-compose-schema.json"
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json"
 }
