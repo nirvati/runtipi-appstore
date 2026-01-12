@@ -1,9 +1,10 @@
 {
-  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
   "services": [
     {
       "name": "portainer",
-      "image": "portainer/portainer-ce:2.35.0",
+      "image": "portainer/portainer-ce:2.37.0",
       "isMain": true,
       "internalPort": 9443,
       "volumes": [

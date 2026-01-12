@@ -2,7 +2,7 @@ version: '3'
 services:
   your-spotify:
     container_name: your-spotify
-    image: yooooomi/your_spotify_client:1.14.0
+    image: yooooomi/your_spotify_client:1.17.0
     depends_on:
       - your-spotify-server
     restart: unless-stopped
@@ -58,7 +58,7 @@ services:
       runtipi.managed: true
   your-spotify-db:
     container_name: your-spotify-db
-    image: mongo:4.4.29
+    image: mongo:4.4.30
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/data/db:/data/db
