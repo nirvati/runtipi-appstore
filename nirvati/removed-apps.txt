@@ -1,0 +1,20 @@
+# Apps removed from the Nirvati fork of the Runtipi app store.
+# One app directory name (under apps/) per line; blank lines and # comments are ignored.
+# Apply with nirvati/remove-apps.sh after every upstream sync.
+
+# Provided by the Nirvati app stores
+bitcoind
+electrs
+mempool
+homeassistant
+homeassistant-1
+pihole
+stalwart-mail
+
+# n8n (license and security concerns)
+n8n
+n8n-1
+n8n-2
+
+# Deprecated upstream (replaced by umami-analytics)
+umami
